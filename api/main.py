@@ -12,5 +12,8 @@ if __name__ == '__main__':
         for k, v in place.items():
             logging.info('Will read {}'.format(k))
             places_info.append(google_parse_place(api_key, v))
-    output_path = os.path.join(os.getcwd(), 'data/out.json')
-    write_json(output_path, places_info)
+    output_dir = os.path.join(os.getcwd(), 'data')
+    out_name = 'out.json'
+    if not os.path.exists(output_dir):
+        os.mkdir(output_dir)
+    write_json(os.path.join(output_dir, out_name), places_info)
