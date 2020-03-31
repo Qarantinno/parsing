@@ -1,3 +1,8 @@
+## Your machine should have
+* .nix system
+* python 3.6+
+* pip3
+
 ## Intallation instructions
 * create a virtual environment (dev): ``` python3 -m virtualenv dev ```
 * install all dependencies ``` pip3 install -r requirements.txt ```
