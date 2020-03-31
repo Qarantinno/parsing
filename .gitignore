@@ -46,3 +46,4 @@ nodeLanguageServer.*/**
 dev/
 .vscode/
 data/
+*.k
