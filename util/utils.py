@@ -2,6 +2,7 @@ import os
 import json
 import logging
 import copy
+import datetime
 
 
 def get_api_key(service):
@@ -34,6 +35,29 @@ def get_place_address_list(name):
     return place.get('addresses')
 
 
+def get_current_weekday():
+    weekdays_map = {
+        0: 'Monday',
+        1: 'Tuesday',
+        2: 'Wednesday',
+        3: 'Thursday',
+        4: 'Friday',
+        5: 'Saturday',
+        6: 'Sunday'
+    }
+    today = datetime.date.today()
+    weekday = today.weekday()
+    return weekdays_map[weekday]
+
+
+def get_out_path():
+    config = _read_global_config()
+    return {
+        'dir': config.get('ouput_dir_name'),
+        'file': config.get('outfile')
+    }
+
+
 def _read_place_info_by_name(name):
     place_list = _get_places_data_list()
     place_info = dict()
@@ -57,9 +81,14 @@ def _read_global_config():
     return _read_json(global_config_path)
 
 
-def write_json(path, obj):
-    with open(path, 'w') as f:
-        json.dump(obj, f)
+def write_json(obj):
+    output_config = get_out_path()
+    output_dir = output_config.get('dir')
+    out_filename = output_config.get('file')
+    if not os.path.exists(output_dir):
+        os.mkdir(output_dir)
+    with open(os.path.join(output_dir, out_filename), 'w') as f:
+        json.dump(obj, f, indent=4)
 
 
 def _read_json(path):

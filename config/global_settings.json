@@ -1,4 +1,6 @@
 {
+    "ouput_dir_name": "data",
+    "outfile": "out.json",
     "parsers": [
         {
             "name": "google",
