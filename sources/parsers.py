@@ -2,7 +2,7 @@ import populartimes
 import logging
 import time
 import os
-from util.utils import get_api_key, get_out_path, get_place_address_list, get_current_weekday
+from util.utils import get_api_key, get_current_hour, get_current_weekday, get_out_path, get_place_address_list
 
 
 class IParser:
@@ -24,6 +24,7 @@ class GoogleParser(IParser):
 
     def get_popular_times_today(self):
         current_weekday = get_current_weekday()
+        current_hour = get_current_hour()
         popular_times_list = list()
         for place in self.places_info:
             popular_times_list.append(
@@ -32,7 +33,7 @@ class GoogleParser(IParser):
                 'address': place['address'],
                 'types': place['types'],
                 'coordinates': place['coordinates'],
-                'popular_times_today': [day['data'] for day in place['populartimes'] if day['name'] == current_weekday]
+                'current_popularity': [day['data'] for day in place['populartimes'] if day['name'] == current_weekday][0][current_hour]
                 }
             )
         return popular_times_list

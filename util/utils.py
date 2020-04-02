@@ -50,6 +50,11 @@ def get_current_weekday():
     return weekdays_map[weekday]
 
 
+def get_current_hour():
+    time = datetime.datetime.now()
+    return time.hour
+
+
 def get_out_path():
     config = _read_global_config()
     return {
