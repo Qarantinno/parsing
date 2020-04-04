@@ -9,6 +9,6 @@
 * install all dependencies ``` pip install -r requirements.txt ```
 * install google places crawler ``` pip install --upgrade git+https://github.com/m-wrzr/populartimes ```
 * add google api key path at ```config/global_settings.json```
-* start server ``` python -m api/main.py ```
+* start server ``` python -m api.main ```
 
 the output will be shown at data/out.json
