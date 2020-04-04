@@ -1,0 +1,7 @@
+version: '3'
+services:
+### Python ###########################################
+    python:
+      build: ./python
+      volumes:
+        - ${APP_ROOT_PATH}:${DOCKER_APP_ROOT_PATH}
