@@ -6,8 +6,8 @@ from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
-from src.exceptions.exceptions import UIException
-from src.gui.elements.web_base_element import WebBaseElement
+from sources.src.exceptions.exceptions import UIException
+from sources.src.gui.elements.web_base_element import WebBaseElement
 
 
 class WebElementList:

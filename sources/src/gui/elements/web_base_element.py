@@ -6,7 +6,7 @@ from selenium.webdriver.common.action_chains import ActionChains as AC
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
-from src.exceptions.exceptions import UIException
+from sources.src.exceptions.exceptions import UIException
 
 
 class WebBaseElement:
@@ -14,7 +14,7 @@ class WebBaseElement:
     WebElement is basic object, that represents any item in the DOM of the page, and able to interact with it.
     It's base element with common methods for all elements. In most cases better to use his childs in PageObjects
     """
-    WAIT_TIME = 15
+    WAIT_TIME = 45
 
     def __init__(self, by, value):
         """
@@ -59,6 +59,11 @@ class WebBaseElement:
         except Exception:
             raise UIException(
                 'WebElement with condition [{0}] NOT presented for [{1}:{2}]'.format(condition, self.by, self.value))
+
+    def refind(self, condition='presence_of_element_located', wait_time=WAIT_TIME):
+        element = self.get_element(condition, wait_time)
+        return element
+
 
     def is_visible(self, wait_time=0):
         """

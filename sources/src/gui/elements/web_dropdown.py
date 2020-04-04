@@ -1,8 +1,8 @@
 import logging
 
-from src.exceptions.exceptions import UIException
-from src.gui.elements.web_base_element import WebBaseElement
-from src.gui.elements.web_clickable import WebClickable
+from sources.src.exceptions.exceptions import UIException
+from sources.src.gui.elements.web_base_element import WebBaseElement
+from sources.src.gui.elements.web_clickable import WebClickable
 
 
 class WebDropDown(WebClickable):

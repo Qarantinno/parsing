@@ -1,4 +1,4 @@
-from src.gui.elements.web_base_element import WebBaseElement
+from sources.src.gui.elements.web_base_element import WebBaseElement
 
 
 class WebIframe(WebBaseElement):

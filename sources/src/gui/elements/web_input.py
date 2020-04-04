@@ -2,8 +2,8 @@ import logging
 
 from selenium.webdriver.common.keys import Keys
 
-from src.exceptions.exceptions import UIException
-from src.gui.elements.web_clickable import WebClickable
+from sources.src.exceptions.exceptions import UIException
+from sources.src.gui.elements.web_clickable import WebClickable
 
 
 class WebInput(WebClickable):

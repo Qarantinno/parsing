@@ -20,6 +20,7 @@ class Parameter(Enum):
     SELENIUM_HOST = 'selenium_host'
     WAIT = 'wait'
     # chrome options
+    HEADLESS = 'headless'
     NO_SANDBOX = 'no_sandbox'
     DISABLE_LOGGING = 'disable_logging'
     CACHE_SIZE = 'cache_size'

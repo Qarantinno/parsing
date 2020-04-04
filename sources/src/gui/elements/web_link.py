@@ -1,4 +1,4 @@
-from src.gui.elements.web_clickable import WebClickable
+from sources.src.gui.elements.web_clickable import WebClickable
 
 
 class WebLink(WebClickable):

@@ -1,20 +1,15 @@
 import logging
 from .src.execution_tools.driver_pool import DriverPool
+from .src.gui.pages.maps_result_page import GoogleMapsResultPage
 from time import sleep
 
-driver_pool = DriverPool()
 
-driver = driver_pool.create_driver()
-
-logging.getLogger('ui').info('start')
-
-driver.get('https://www.google.com/maps/search/%D0%B0%D0%BB%D0%BC%D0%B8')
-
-sleep(10)
-
-def gg():
+def gg(store):
     driver_pool = DriverPool()
     driver = driver_pool.create_driver()
     logging.getLogger('ui').info('start')
-    driver.get('https://www.google.com/maps/search/%D0%B0%D0%BB%D0%BC%D0%B8')
-    sleep(10)
+    url = 'https://www.google.com/maps/search/{0}'.format(store)
+    page = GoogleMapsResultPage(driver, url)
+    page.open()
+    page.get_search_result_names()
+    driver.quit()
