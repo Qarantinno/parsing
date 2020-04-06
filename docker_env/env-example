@@ -1,0 +1,7 @@
+# Define the prefix of container names. This is useful if you have multiple projects that use nodedock to have seperate containers per project.
+COMPOSE_PROJECT_NAME=parser_docker_env
+
+
+#  App mounting
+APP_ROOT_PATH=../
+DOCKER_APP_ROOT_PATH=/app
