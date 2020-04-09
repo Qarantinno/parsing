@@ -14,7 +14,7 @@ class WebBaseElement:
     WebElement is basic object, that represents any item in the DOM of the page, and able to interact with it.
     It's base element with common methods for all elements. In most cases better to use his childs in PageObjects
     """
-    WAIT_TIME = 45
+    WAIT_TIME = 15
 
     def __init__(self, by, value):
         """

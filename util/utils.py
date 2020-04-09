@@ -74,7 +74,7 @@ def _read_place_info_by_name(name):
 
 def _get_places_data_list():
     places_config_path = os.path.join(
-        os.getcwd(), 'config/places.json'
+        os.getcwd(), 'config/places_test.json'
     )
     return _read_json(places_config_path)
 

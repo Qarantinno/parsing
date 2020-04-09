@@ -3,8 +3,7 @@
     "outfile": "out.json",
     "parsers": [
         {
-            "name": "google",
-            "api_key_path": "google.k"
+            "name": "google"
         }
     ]
 }
