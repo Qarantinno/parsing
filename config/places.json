@@ -44,96 +44,56 @@
       "Pereulok Rabochiy 5",
       "Bul'var Shevchenko 9"
     ]
-    },
-    {
-      "name": "Hit!",
-      "addresses":[
-          
-              "Нёманская 76",
-              
-          
-              "Нёманская  3",
-          
-  
-          
-          
-              "Лобанка 14",
-          
-          
-              "улица Колесникова 18",
-          
-                                                          
-              "вулiца Карла Лiбкнехта 73, Мінск",                             
-                                                          
-          
-              "Кирова 22",
-          
-          
-              "Максима Танка 16",
-          
-              "Кошевого 27а",
-          
-              
-          
-              "Беломорская 8",
-         
-              
-          
-              "Логойский тракт 31а",
-          
-              
-         
-              "Корженевского 23а"
-              
-              
-              ]
-    },
-    {
-      "name":"Euroopt",
-      "addresses":[
-        "praspiekt Mašerava 51",
-        "Levkova 9",
-        "Ivanovskaya 36",
-        "praspiekt Nezavicimosti 48",
-        "V. Khoruzhey 31",
-        "Yakub Kolasa 36",
-        "Kazimirovskaya 6",
-        "Pulikhova 3",
-        "Ulitsa Goretskogo 73",
-        "Prytyckaha 110",
-        "Prytyckaha 29",
-        "Kuntsevshchina 19",
-        " Uladzislava Halubka 2",
-        "Ratomskaya 7",
-        "Prospekte Pobeditelei 89к3",
-        "Staravilienski trakt 77",
-        "Maksima Bahdanoviča 116",
-        "Prospekte Karbyshava 7/2",
-        "Filimonava 13/1",
-        "Svyazistov 6к2",
-        "Matusieviča 35G",
-        "Mendeleyeva 23",
-        "Botanicheskaya 5A",
-        "Bahracijona 55B",
-        "Vanyeyeva 4",
-        "Ubareviča 16",
-        "Goloded St 7к2",
-        "Rotmistrova 42",
-        "Jakubaŭ St 64-2",
-        "Prushinskikh 2",
-        "Baradzinskaja 35",
-        "Asanalijeva 44",
-        "Kazintsa 92к1",
-        "Levkova 9",
-        "Zhukovskogo 1",
-        "Vakzaĺnaja 7",
-        "Šaranhoviča 34",
-        "Khar'kovskaya 72",
-        "Praspyekt Zhukava 11",
-        "Odintsova 65",
-        "Mantažnikaŭ 2",
-        "Rafijeva 5",
-        "Prospekt Dzerzhinskogo 104"
-      ]
-    }
-  ]
+  },
+  {
+    "name":"Hit!",
+    "addresses":[
+      "Нёманская 76",
+      "Нёманская  3",
+      "Лобанка 14",
+      "улица Колесникова 18",
+      "вулiца Карла Лiбкнехта 73, Мінск",
+      "Кирова 22",
+      "Максима Танка 16",
+      "Кошевого 27а",
+      "Беломорская 8",
+      "Логойский тракт 31а",
+      "Корженевского 23а"
+    ]
+  },
+  {
+    "name":"Euroopt",
+    "addresses":[
+      "Машерова 51",
+      "Левкова 9",
+      "Независимости 48",
+      "Веры Хоружей 31",
+      "Якуба Колоса 36",
+      "улица Казимировская 6 Минск",
+      "Пулихова 3",
+      "Горецкого 73",
+      "Притыцкого 110",
+      "улица Притыцкого 29",
+      "Кунцевщина 19",
+      "Голубка 2",
+      "Карбышева 7/2",
+      "Филимонова 13/1",
+      "Связистов 6/2",
+      "Менделеева 23",
+      "Ботаническая 5A",
+      "Ванеева 4",
+      "Уборевича 16",
+      "Голодеда 7к2",
+      "Ротмистрова 42",
+      "Якубова 64/2",
+      "Прушинских 2",
+      "Бородинская 35",
+      "Асаналиева 44",
+      "Казинца 92k1",
+      "Шаранговича 34",
+      "Харьковская 72",
+      "Одинцова 65",
+      "Проспект Держинского 104"
+    ]
+  }
+]

@@ -48,3 +48,4 @@ dev/
 data/
 # Unit test / coverage reports
 .pytest_cache/
+*.log

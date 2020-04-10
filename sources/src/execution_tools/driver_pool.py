@@ -8,8 +8,6 @@ class DriverPool:
 
     MAX_DRIVERS_COUNT = int(Context.get_gui_parameter(Parameter.MAX_DRIVERS_COUNT))
 
-    LOGGER = logging.getLogger('settings')
-
     def __init__(self, drivers_count=1):
         self.drivers = list()
         self.drivers_count = drivers_count
@@ -26,7 +24,7 @@ class DriverPool:
         try:
             return self.drivers[index]
         except IndexError as e:
-            self.LOGGER.error(e)
+            logging.error(e)
             return self.drivers[0]
 
     def create_driver(self):
@@ -35,10 +33,10 @@ class DriverPool:
         self.drivers.append(driver)
 
         assert len(self.drivers) <= self.MAX_DRIVERS_COUNT, 'Max driver pool length is reached.'
-        self.LOGGER.debug('Driver is on the pool.')
+        logging.debug('Driver is on the pool.')
         return driver
 
     def kill_drivers(self):
-        self.LOGGER.debug('Will kill drivers. Drivers count: {}'.format(len(self.drivers)))
+        logging.debug('Will kill drivers. Drivers count: {}'.format(len(self.drivers)))
         for driver in self.drivers:
             driver.quit()

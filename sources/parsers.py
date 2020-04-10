@@ -2,17 +2,9 @@ import logging
 from .src.execution_tools.driver_pool import DriverPool
 from .src.gui.pages.maps_result_page import GoogleMapsResultPage
 from time import sleep
+import pytz
+from datetime import datetime
 
-
-def gg(store):
-    driver_pool = DriverPool()
-    driver = driver_pool.create_driver()
-    logging.getLogger('ui').info('start')
-    url = 'https://www.google.com/maps/search/{0}'.format(store)
-    page = GoogleMapsResultPage(driver, url)
-    page.open()
-    page.get_search_result_names()
-    driver.quit()
 
 class GoogleParser:
     URL = 'https://www.google.com/maps/search/{0}'
@@ -25,17 +17,31 @@ class GoogleParser:
     
     def parse_store_info(self):
         info = list()
-        for place in self.places:
-            for address in place['addresses']:
-                result_page = GoogleMapsResultPage(self.driver, self.URL.format(place['name'] + ' ' + address))
-                result_page.open()
-                lives = result_page.get_search_result_live(address)
-                info.append(
-                    {
-                        'name': place['name'],
-                        'lives': lives,
-                        'address': address
-                    }
-                )
+        try:
+            for place in self.places:
+                for address in place['addresses']:
+                    result_page = GoogleMapsResultPage(self.driver, self.URL.format(place['name'] + ' ' + address))
+                    result_page.open()
+                    lives = result_page.get_search_result_live(address)
+                    sleep(2)
+                    abs_time = pytz.utc.localize(datetime.utcnow())
+                    cur_time = abs_time.astimezone(pytz.timezone("Europe/Minsk")).isoformat()
+                    coords = self.driver.current_url.split('/')[6].replace('@', '').replace('z', '').split(',')
+                    info.append(
+                        {
+                            'name': place['name'],
+                            'people': lives,
+                            'datetime': cur_time,
+                            'address': address,
+                            'coords': {
+                                'lat': coords[0],
+                                'long': coords[1]
+                            }
+                        }
+                    )
+        except KeyboardInterrupt as e:
+            self.driver.quit()
+
+        self.driver.quit()
         return info
 
