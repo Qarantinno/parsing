@@ -1,3 +1,4 @@
+.idea
 .DS_Store
 .huskyrc.json
 out
@@ -49,3 +50,5 @@ data/
 # Unit test / coverage reports
 .pytest_cache/
 *.log
+*.k
+.env
