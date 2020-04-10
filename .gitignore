@@ -47,5 +47,8 @@ nodeLanguageServer.*/**
 dev/
 .vscode/
 data/
+# Unit test / coverage reports
+.pytest_cache/
+*.log
 *.k
 .env

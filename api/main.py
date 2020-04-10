@@ -1,14 +1,19 @@
 import logging
 import os
-from util.utils import write_json
+import util.utils as util
+import logging
 
 
 if __name__ == '__main__':
     from sources.parsers import GoogleParser
-    from util.utils import get_api_key
-
-    api_key = get_api_key('google')
-    place = 'Green'
-    parser = GoogleParser(api_key, place)
-    times = parser.get_popular_times_today()
-    write_json(times)
+    logging.basicConfig(filename='output.log', filemode='w', level=logging.INFO, format='%(levelname)s: %(asctime)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
+    weekday = util.get_current_weekday()
+    places_info = util._get_places_data_list()
+    parser = GoogleParser(places_info)
+    
+    out = {
+        'day': weekday,
+        'lives': parser.parse_store_info()
+    }
+    util.write_json(out)
+    
