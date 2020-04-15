@@ -1,99 +1,382 @@
 [
   {
-    "name":"Vitalur",
+    "name":"Hit!",
     "addresses":[
-      "Ulitsa Nekrasova 3А/1",
-      "улица Голодеда 13",
-      "улица Филимонова 10",
-      "улица Волгоградская 1/3",
-      "улица Маяковского 176",
-      "Olega Koshevogo 9",
-      "улица Тарханова 9",
-      "вуліца Ляўкова 8А",
-      "улица Андреевская 11",
-      "улица Чкалова 36",
-      "улица Уборевича 75",
-      "улица Есенина 27",
-      "улица Волоха 2",
-      "Partizanskiy Prospet 106",
-      "улица Лынькова 99",
-      "праспект Газеты Праўда 20",
-      "ulitsa Karla Libknekhta 106",
-      "вуліца Голубева 24а",
-      "Prospekt Pushkina 24",
-      "вуліца Кіжаватава 72/1",
-      "улица Казимировская 35",
-      "проспект Рокоссовского148А",
-      "Zhinovicha 7",
-      "проспект Газеты Звезда 22/1",
-      "Miroshnichenko 3",
-      "Igumenskiy Trakt 11",
-      "Krupskoy 6/1",
-      "Labanka 26",
-      "улица Космонавтов 5А",
-      "проспект Газеты Правда 40/2",
-      "улица Рафиева 56",
-      "улица Ландера 38",
-      "улица Максима, улица Горецкого 32",
-      "вуліца Налібоцкая 39",
-      "Miastraŭskaja 27",
-      "Логойский тракт 30/4",
-      "вуліца Уральская 7",
-      "улица Космонавтов 28",
-      "вуліца Галадзеда 14",
-      "Pereulok Rabochiy 5",
-      "Bul'var Shevchenko 9"
+      {
+        "address":"Нёманская  3",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"Кирова 22",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"Кошевого 27а",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"Беломорская 8",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"Логойский тракт 31а",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"Корженевского 23а",
+        "type":"product",
+        "modifier":"mini"
+      }
     ]
   },
   {
-    "name":"Hit!",
+    "name":"Vitalur",
     "addresses":[
-      "Нёманская 76",
-      "Нёманская  3",
-      "Лобанка 14",
-      "улица Колесникова 18",
-      "вулiца Карла Лiбкнехта 73, Мінск",
-      "Кирова 22",
-      "Максима Танка 16",
-      "Кошевого 27а",
-      "Беломорская 8",
-      "Логойский тракт 31а",
-      "Корженевского 23а"
+      {
+        "address":"Ulitsa Nekrasova 3А/1",
+        "type":"product",
+        "modifier":"super"
+      },
+      {
+        "address":"улица Голодеда 13",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"улица Филимонова 10",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"улица Волгоградская 1/3",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"улица Маяковского 176",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"улица Olega Koshevogo 9",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"улица Тарханова 9",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"вуліца Ляўкова 8А",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"улица улица Андреевская 11",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"улица Чкалова 36",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"улица Уборевича 75",
+        "type":"product",
+        "modifier":"super"
+      },
+      {
+        "address":"улица Есенина 27",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"улица Волоха 2",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"Partizanskiy Prospet 106",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"улица Лынькова 99",
+        "type":"product",
+        "modifier":"super"
+      },
+      {
+        "address":"праспект Газеты Праўда 20",
+        "type":"product",
+        "modifier":"super"
+      },
+      {
+        "address":"ulitsa Karla Libknekhta 106",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"вуліца Голубева 24а",
+        "type":"product",
+        "modifier":"super"
+      },
+      {
+        "address":"Prospekt Pushkina 24",
+        "type":"product",
+        "modifier":"super"
+      },
+      {
+        "address":"вуліца Кіжаватава 72/1",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"улица Казимировская 35",
+        "type":"product",
+        "modifier":"super"
+      },
+      {
+        "address":"проспект Рокоссовского148А",
+        "type":"product",
+        "modifier":"super"
+      },
+      {
+        "address":"Miroshnichenko 3",
+        "type":"product",
+        "modifier":"super"
+      },
+      {
+        "address":"Igumenskiy Trakt 11",
+        "type":"product",
+        "modifier":"super"
+      },
+      {
+        "address":"Krupskoy 6/1",
+        "type":"product",
+        "modifier":"super"
+      },
+      {
+        "address":"улица Космонавтов 5A",
+        "type":"product",
+        "modifier":"super"
+      },
+      {
+        "address":"улица Рафиева 56",
+        "type":"product",
+        "modifier":"super"
+      },
+      {
+        "address":"улица Ландера 38",
+        "type":"product",
+        "modifier":"super"
+      },
+      {
+        "address":"улица Максима, улица Горецкого 32",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"вуліца Налібоцкая 39",
+        "type":"product",
+        "modifier":"super"
+      },
+      {
+        "address":"Miastraŭskaja 27",
+        "type":"product",
+        "modifier":"super"
+      },
+      {
+        "address":"Логойский тракт 30/4",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"вуліца Уральская 7",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"улица Космонавтов 28",
+        "type":"product",
+        "modifier":"super"
+      },
+      {
+        "address":"вуліца Галадзеда 14",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"Pereulok Rabochiy 5",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"Bul'var Shevchenko 9",
+        "type":"product",
+        "modifier":"mini"
+      }
     ]
   },
   {
     "name":"Euroopt",
     "addresses":[
-      "Машерова 51",
-      "Левкова 9",
-      "Независимости 48",
-      "Веры Хоружей 31",
-      "Якуба Колоса 36",
-      "улица Казимировская 6 Минск",
-      "Пулихова 3",
-      "Горецкого 73",
-      "Притыцкого 110",
-      "улица Притыцкого 29",
-      "Кунцевщина 19",
-      "Голубка 2",
-      "Карбышева 7/2",
-      "Филимонова 13/1",
-      "Связистов 6/2",
-      "Менделеева 23",
-      "Ботаническая 5A",
-      "Ванеева 4",
-      "Уборевича 16",
-      "Голодеда 7к2",
-      "Ротмистрова 42",
-      "Якубова 64/2",
-      "Прушинских 2",
-      "Бородинская 35",
-      "Асаналиева 44",
-      "Казинца 92k1",
-      "Шаранговича 34",
-      "Харьковская 72",
-      "Одинцова 65",
-      "Проспект Держинского 104"
+      {
+        "address":"Машерова 51",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"улица Левкова 9",
+        "type":"product",
+        "modifier":"super"
+      },
+      {
+        "address":"Независимости 48",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"Веры Хоружей 31",
+        "type":"product",
+        "modifier":"super"
+      },
+      {
+        "address":"Якуба Колоса 36",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"улица Казимировская 6 Минск",
+        "type":"product",
+        "modifier":"hyper"
+      },
+      {
+        "address":"Пулихова 3",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"Горецкого 73",
+        "type":"product",
+        "modifier":"super"
+      },
+      {
+        "address":"Притыцкого 110",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"улица Притыцкого 29",
+        "type":"product",
+        "modifier":"hyper"
+      },
+      {
+        "address":"Кунцевщина 19",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"Голубка 2",
+        "type":"product",
+        "modifier":"hyper"
+      },
+      {
+        "address":"Карбышева 7/2",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"Филимонова 13/1",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"Связистов 6/2",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"Менделеева 23",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"Ботаническая 5A",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"Ванеева 4",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"Уборевича 16",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"Голодеда 7к2",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"Ротмистрова 42",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"Якубова 64/2",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"Прушинских 2",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"Бородинская 35",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"Асаналиева 44",
+        "type":"product",
+        "modifier":"super"
+      },
+      {
+        "address":"Казинца 92k1",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"Шаранговича 34",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"Харьковская 72",
+        "type":"product",
+        "modifier":"mini"
+      },
+      {
+        "address":"Одинцова 65",
+        "type":"product",
+        "modifier":"super"
+      },
+      {
+        "address":"Проспект Держинского 104",
+        "type":"product",
+        "modifier":"super"
+      }
     ]
   }
 ]

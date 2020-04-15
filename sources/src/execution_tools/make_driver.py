@@ -48,7 +48,8 @@ def make_driver(browser, command_executor):
             Context.get_gui_parameter(Parameter.IGNORE_CERT_ERRORS),
             Context.get_gui_parameter(Parameter.MUTE_AUDIO),
             Context.get_gui_parameter(Parameter.NO_FIRST_RUN),
-            Context.get_gui_parameter(Parameter.NO_SANDBOX)
+            Context.get_gui_parameter(Parameter.NO_SANDBOX),
+            Context.get_gui_parameter(Parameter.HEADLESS)
         ]
 
         for option in opts_from_config:

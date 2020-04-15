@@ -38,6 +38,6 @@ class GoogleMapsResultPage(BasePage):
             live_popularity = float(perc.split('%')[0])
         except TimeoutException as ee:
             logging.info('{0}: nothing found, will return null'.format(address))
-            return
+            return -1
         return live_popularity
 

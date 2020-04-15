@@ -20,19 +20,26 @@ class GoogleParser:
         try:
             for place in self.places:
                 for address in place['addresses']:
-                    result_page = GoogleMapsResultPage(self.driver, self.URL.format(place['name'] + ' ' + address))
+                    result_page = GoogleMapsResultPage(self.driver, self.URL.format(place['name'] + ' ' + address['address']))
                     result_page.open()
-                    lives = result_page.get_search_result_live(address)
-                    sleep(2)
+                
+                    lives = result_page.get_search_result_live(address['address'])
+                
+                    sleep(3)
                     abs_time = pytz.utc.localize(datetime.utcnow())
                     cur_time = abs_time.astimezone(pytz.timezone("Europe/Minsk")).isoformat()
-                    coords = self.driver.current_url.split('/')[6].replace('@', '').replace('z', '').split(',')
+                    try:
+                        coords = self.driver.current_url.split('/')[6].replace('@', '').replace('z', '').split(',')
+                    except TypeError as e:
+                        continue
                     info.append(
                         {
                             'name': place['name'],
                             'people': lives,
                             'datetime': cur_time,
-                            'address': address,
+                            'address': address['address'],
+                            'type': address['type'],
+                            'modifier': address['modifier'],
                             'coords': {
                                 'lat': coords[0],
                                 'long': coords[1]
