@@ -27,8 +27,9 @@ post_a_shot_payload = {
     "trackingData": "{\"sourceId\": \"google\" }"
 }
 
+import os
 
-CLIENT_ID = 'xxxxx'
+CLIENT_ID = os.environ.get('CLIENT_ID')
 
 
 header = {
@@ -43,6 +44,8 @@ import json
 
 
 def get_a_place(address):
+    if not CLIENT_ID:
+        raise RuntimeError('Please set CLIENT_ID environ var!')
     url = API_URL + GET_PLACE_ENDPOINT.format(address)
     logging.info('GET {0}, address {1}, header {2}'.format(url, address, header))
 
@@ -57,6 +60,8 @@ def get_a_place(address):
 
 
 def post_a_place():
+    if not CLIENT_ID:
+        raise RuntimeError('Please set CLIENT_ID environ var!')
     url = API_URL + POST_PLACE_ENDPOINT
     logging.info('POST {0}, data {1}, header {2}'.format(url, post_a_place_payload.__str__(), header))
 
@@ -70,6 +75,8 @@ def post_a_place():
 
 
 def post_a_place_shot(id):
+    if not CLIENT_ID:
+        raise RuntimeError('Please set CLIENT_ID environ var!')
     url = API_URL + POST_PLACE_SHOT_ENDPOINT.format(id)
     logging.info('POST {0}, data {1}, header {2}'.format(url, post_a_shot_payload, header))
 

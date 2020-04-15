@@ -4,6 +4,7 @@
 * pip3
 
 ## Intallation instructions
+* set environment variable CLIENT_ID to corresponding value - it's mandatory
 * create a virtual environment (dev): ``` python3 -m virtualenv dev ```
 * activate it ``` source dev/bin/activate ```
 * install all dependencies ``` pip install -r requirements.txt ```
