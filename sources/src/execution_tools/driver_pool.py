@@ -37,6 +37,6 @@ class DriverPool:
         return driver
 
     def kill_drivers(self):
-        logging.debug('Will kill drivers. Drivers count: {}'.format(len(self.drivers)))
+        logging.info('Will kill drivers. Drivers count: {}'.format(len(self.drivers)))
         for driver in self.drivers:
             driver.quit()
