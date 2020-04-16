@@ -1,2 +1,4 @@
-with open('/app/output.txt', 'w') as f:
-    f.write('It works')
+from sources.src.execution_tools.driver_pool import DriverPool
+
+driver = DriverPool().create_driver()
+driver.get('https://google.com')

@@ -2,8 +2,6 @@
 # Full API spec is here: https://github.com/Qarantinno/api/wiki/API
 # TODO: refactor this piece of crap until it will hijack you
 
-API_URL = 'http://178.128.203.91'
-
 POST_PLACE_ENDPOINT = '/api/v1/places'
 POST_PLACE_SHOT_ENDPOINT = '/api/v1/places/{0}/shots'
 GET_PLACE_ENDPOINT = '/api/v1/places?address={0}'
@@ -29,6 +27,7 @@ post_a_shot_payload = {
 
 import os
 
+API_URL = os.environ.get('API_URL')
 CLIENT_ID = os.environ.get('CLIENT_ID')
 
 

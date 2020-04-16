@@ -4,7 +4,7 @@ FROM phusion/baseimage:0.11
 CMD ["/sbin/my_init"]
 
 RUN apt-get update -yqq && \
-    apt-get install -yqq build-essential libssl-dev libffi-dev python-dev git wget
+    apt-get install -yqq build-essential libssl-dev libffi-dev python-dev git wget unzip
 
 RUN apt-get install -yqq python3-pip
 
@@ -17,9 +17,10 @@ RUN apt-get -yqq install openjdk-8-jdk
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 RUN export JAVA_HOME
 
-RUN mkdir -p /opt \
-    && wget http://dl.google.com/linux/deb/pool/main/g/google-chrome-unstable/google-chrome-unstable_78.0.3904.17-1_amd64.deb \
-    && apt-get install -fyqq ./google-chrome-unstable_78.0.3904.17-1_amd64.deb
+RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+    && echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | tee /etc/apt/sources.list.d/google-chrome.list \
+    && apt update \
+    && apt-get install -yqq google-chrome-stable
 
 RUN mkdir -p /etc/my_init.d
 COPY install_deps.sh /etc/my_init.d/050_install_deps.sh

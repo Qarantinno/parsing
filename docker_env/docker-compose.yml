@@ -3,5 +3,8 @@ services:
 ### Python ###########################################
     python:
       build: ./python
+      environment:
+        - API_URL=${API_URL}
+        - CLIENT_ID=${CLIENT_ID}
       volumes:
         - ${APP_ROOT_PATH}:${DOCKER_APP_ROOT_PATH}

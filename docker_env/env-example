@@ -5,3 +5,7 @@ COMPOSE_PROJECT_NAME=parser_docker_env
 #  App mounting
 APP_ROOT_PATH=../
 DOCKER_APP_ROOT_PATH=/app
+
+# Remote keys
+API_URL=http://23423423
+CLIENT_ID=3534535-35635654-345435
