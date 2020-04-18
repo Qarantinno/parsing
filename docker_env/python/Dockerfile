@@ -35,5 +35,6 @@ RUN apt-get install -yqq postfix \
     && mkfifo /var/spool/postfix/public/pickup
 
 COPY ./crontab /etc/crontab
+RUN chmod 600 /etc/crontab
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
